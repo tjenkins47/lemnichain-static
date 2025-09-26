@@ -100,9 +100,16 @@
   
 <div id="navbar-placeholder"></div>
 <script>
-fetch("/html/navbar.html")
-  .then(r => r.text())
-  .then(html => document.getElementById("navbar-placeholder").innerHTML = html);
+fetch('html/navbar.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('navbar-placeholder').innerHTML = html;
+    // Ensure theme toggle initializes after navbar is loaded
+    if (typeof initTheme === "function") {
+      initTheme();
+    }
+  })
+  .catch(err => console.error('Navbar load error:', err));
 </script>
 
   <main class="team-panel">

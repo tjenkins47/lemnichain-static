@@ -68,28 +68,17 @@
 
   <!-- Load shared navbar -->
   <script>
-    fetch('/html/navbar.html')
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to load navbar.html');
-        return res.text();
-      })
-      .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-
-        // Add fixed-top class to nav after loading
-        const nav = document.querySelector('#navbar-placeholder nav');
-        if (nav) {
-          nav.classList.add('fixed-top');
-        }
-
-        // Hide the logo on the homepage
-        const logo = document.querySelector('.navbar-brand img');
-        if (logo) {
-          logo.style.display = 'none';
-        }
-      })
-      .catch(err => console.error('Navbar load error:', err));
-  </script>
+fetch('html/navbar.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('navbar-placeholder').innerHTML = html;
+    // Ensure theme toggle initializes after navbar is loaded
+    if (typeof initTheme === "function") {
+      initTheme();
+    }
+  })
+  .catch(err => console.error('Navbar load error:', err));
+</script>
 
 </body>
 </html>

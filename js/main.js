@@ -16,13 +16,13 @@ function initTheme() {
   const savedTheme = localStorage.getItem("theme");
 
   if (savedTheme === "dark") {
-    document.body.classList.add("dark-theme");
+    document.body.classList.add("dark-mode");
     if (icon) icon.classList.replace("bi-moon-fill", "bi-sun-fill");
   }
 
   if (toggle) {
     toggle.addEventListener("click", () => {
-      const isDark = document.body.classList.toggle("dark-theme");
+      const isDark = document.body.classList.toggle("dark-mode");
       localStorage.setItem("theme", isDark ? "dark" : "light");
 
       if (icon) {
@@ -44,15 +44,15 @@ function initLangToggle() {
 
   const translations = {
     EN: {
-        about: "About",
-        unique: "Uniqueness",
-        security: "Security",
-        scarcity: "Scarcity",
-        wallet: "Wallet",
-        team: "Our Team",
-        help: "FAQ",
-        langLabel: "Languages"
-        },
+      about: "About",
+      unique: "Uniqueness",
+      security: "Security",
+      scarcity: "Scarcity",
+      wallet: "Wallet",
+      team: "Our Team",
+      help: "FAQ",
+      langLabel: "Languages"
+    },
     FR: {
       home: "Accueil",
       intro: "Présentation",
@@ -92,19 +92,18 @@ function initLangToggle() {
       document.getElementById("nav-team").textContent = dict.team;
     if (document.getElementById("nav-help"))
       document.getElementById("nav-help").textContent = dict.help;
- if (document.getElementById("nav-unique"))
+    if (document.getElementById("nav-unique"))
       document.getElementById("nav-unique").textContent = dict.unique;
     if (document.getElementById("langLabel"))
       document.getElementById("langLabel").textContent = dict.langLabel;
-      if (document.getElementById("nav-scarcity"))
+    if (document.getElementById("nav-scarcity"))
       document.getElementById("nav-scarcity").textContent = dict.scarcity;
-
 
     // 🔑 Update homepage hero image
     const heroImages = {
-      EN: "/static/graphics/Homepage_EN.jpg",
-      FR: "/static/graphics/Homepage_FR.jpg",
-      ES: "/static/graphics/Homepage_ES.jpg"
+      EN: "graphics/Homepage_EN.jpg",
+      FR: "graphics/Homepage_FR.jpg",
+      ES: "graphics/Homepage_ES.jpg"
     };
     const hero = document.getElementById("homepageHero");
     if (hero) {
