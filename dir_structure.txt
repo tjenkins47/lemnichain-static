@@ -1,0 +1,71 @@
+Folder PATH listing for volume Seagate Expansion Drive
+Volume serial number is F2BB-E1A5
+D:.
+¦   dir_structure.txt
+¦   Procfile
+¦   requirements.txt
+¦   web_wallet.py
+¦   
++---static
+¦   ¦   index.html
+¦   ¦   
+¦   +---css
+¦   ¦       style.css
+¦   ¦       
+¦   +---graphics
+¦   ¦       blue_ocean_background.jpg
+¦   ¦       Diego_Navarro.jpg
+¦   ¦       Grant_Wilkie.jpg
+¦   ¦       Homepage_Base_Dubai.jpg
+¦   ¦       Homepage_EN.jpg
+¦   ¦       Homepage_ES.jpg
+¦   ¦       Homepage_FR.jpg
+¦   ¦       Lemni Logo.jpg
+¦   ¦       Lemni_Logo_tight_crop.jpg
+¦   ¦       Lillia.jpg
+¦   ¦       logo_reflection_with_text.jpg
+¦   ¦       Ralph_Vince.jpg
+¦   ¦       Tom_Jenkins.jpg
+¦   ¦       Walid_Bahij.jpg
+¦   ¦       
+¦   +---html
+¦   ¦       navbar_root.html
+¦   ¦       
+¦   +---js
+¦   ¦       main.js
+¦   ¦       
+¦   +---pdfs
+¦           LemniChain_Security_Analysis_File Permissions_Cryptographic_Security_and_Attack_Vectors.pdf
+¦           QuantumSecurityComparison.pdf
+¦           
++---templates
+¦       about.html
+¦       api.html
+¦       constants_block.html
+¦       create_wallet.html
+¦       governance.html
+¦       help.html
+¦       intro.html
+¦       intro_good_092525.html
+¦       intro_keep.html
+¦       intro_old.orig.html
+¦       LemniChain_Security_Analysis.html
+¦       lemni_wallet.html
+¦       LOS.html
+¦       navbar - Copy (2).html
+¦       navbar - Copy.html
+¦       navbar.html
+¦       node.html
+¦       node_template.html
+¦       quantum.html
+¦       QuantumSecurityComparison.html
+¦       scarcity.html
+¦       security.html
+¦       team.html
+¦       unique.html
+¦       wallet.html
+¦       
++---wasm
+        keygen.py
+        keygen.wasm
+        

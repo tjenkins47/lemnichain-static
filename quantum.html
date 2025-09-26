@@ -1,0 +1,108 @@
+{% import "constants_block.html" as C %}
+<!DOCTYPE html>
+<!-- DEBUG: Rendered by Flask -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Security – LemniChain</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="{{ C.CSS_URL() }}/style.css" />
+  <script defer src="{{ C.JS_URL() }}/main.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('/graphics/blue_ocean_background.jpg') center center / cover no-repeat;
+      background-attachment: fixed;
+      color: #222;
+    }
+
+    /* Floating central panel */
+    .quantum-panel {
+      max-width: 60%;
+      margin: 5rem auto;
+      background-color: rgba(255, 255, 255, 0.92);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+
+    /* Dark mode override */
+    body.dark-mode .quantum-panel {
+      background-color: rgba(34, 34, 34, 0.9);
+      color: #eee;
+    }
+
+    h1 {
+      font-weight: bold;
+      color: #2c3e50;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.25rem;
+    }
+    body.dark-mode h1 {
+      color: #ddd;
+      border-bottom-color: #444;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      color: #333;
+    }
+    body.dark-mode h2 {
+      color: #ddd;
+    }
+
+    ul {
+      margin-left: 1.2em;
+    }
+
+    code {
+      background-color: #f2f2f2;
+      padding: 2px 4px;
+      font-family: monospace;
+      border-radius: 3px;
+    }
+    body.dark-mode code {
+      background-color: #444;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  
+<div id="navbar-placeholder"></div>
+<script>
+fetch("/html/navbar.html")
+  .then(r => r.text())
+  .then(html => document.getElementById("navbar-placeholder").innerHTML = html);
+</script>
+
+
+  <main class="quantum-panel">
+    <h1>Quantum-Resistant Cryptography</h1>
+    <p>
+      LemniChain is built upon <strong>LAI</strong> &mdash; <em>Lemniscate-AGM Isogeny</em> &mdash;
+      an advanced cryptographic model that is fully immune to
+      <strong>Shor's</strong> and <strong>Grover's</strong> algorithms.
+    </p>
+
+    <h2>Audit Highlights (2025)</h2>
+    <ul>
+      <li>No periodicity detected (Shor’s)</li>
+      <li>No Grover amplification</li>
+      <li>2048-bit safe prime space</li>
+    </ul>
+
+    <p><em>Refer to:</em> <a href="QuantumSecurityComparison.html">
+      Quantum Security Comparison
+    </a></p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
